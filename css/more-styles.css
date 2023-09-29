@@ -1,0 +1,329 @@
+#main-page-wrapper {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+#main-page-wrapper > .row {
+    margin: 0;
+}
+.names-progress-wrapper {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 78px;
+    letter-spacing: -0.03em;
+    color: #828282;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    height: 235px;
+}
+.names-block .hello-txt, .progress-block {
+    color: black;
+}
+.hello-txt {
+    padding-right: 7px;
+}
+.names .name {
+    display: none;
+}
+.names .name.active-name {
+    display: block;
+}
+.text-1, .text-2 {
+    display: none;
+}
+
+#main-content {
+    padding-bottom: 50px;
+}
+.mc-wrapper {
+    width: 90%;
+    margin: auto;
+}
+.mc-wrapper h2, .names-progress-wrapper h2 {
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 117px;
+    letter-spacing: -0.03em;
+    color: #A5A5A5;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    left: 20px;
+}
+.names-progress-wrapper h2 {
+    width: 85%;
+}
+.mc-wrapper h2.black-txt, .names-progress-wrapper h2.black-txt {
+    top: 110px;
+    z-index: 0;
+}
+.mc-wrapper h2 span, .names-progress-wrapper h2 span {
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.pictures-wrapper {
+    margin-top: 250px;
+}
+.picture-block {
+    position: relative;
+    margin-bottom: 50px;
+}
+.txt-block {
+    position: absolute;
+    max-width: 300px;
+    bottom: 10px;
+    right: 0;
+}
+.picture-block-1 .txt-block {
+    left: 0;
+    right: auto;
+}
+.single-picture, .multiple-pictures {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+.celebrant-picture {
+    max-width: 400px;
+    width: 100%;
+}
+.multiple-pictures:not(.default-view) {
+    max-width: 2000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.multiple-pictures {
+    transition: max-width 1.5s;
+}
+.multiple-pictures img {
+    transition: transform 1.5s;
+}
+.multiple-pictures.default-view img:not(:first-child) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+}
+.multiple-pictures.default-view img:nth-child(1) {
+    z-index: 3;
+    position: relative;
+}
+.multiple-pictures.default-view img:nth-child(2) {
+    transform: rotate(5deg) translate(10%, -5px) scale(0.9);
+    z-index: 2;
+}
+.multiple-pictures.default-view img:nth-child(3) {
+    transform: rotate(13deg) translate(10%, -5px) scale(0.9);
+    z-index: 1;
+}
+.multiple-pictures.default-view img:nth-child(4) {
+    transform: rotate(21deg) translate(10%, -5px) scale(0.9);
+    z-index: 0;
+}
+.multiple-pictures img {
+    cursor: pointer;
+}
+.multiple-pix-info {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.multiple-pix-info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    opacity: 1;
+    /* transition: opacity 1.5s; */
+    z-index: 3;
+}
+.pix-shown {
+    opacity: 0;
+}
+
+.play-trigger-wrapper.modal-trigger {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    width: 120px;
+    cursor: pointer;
+    z-index: 10;
+}
+img.play-img {
+    position: absolute;
+    top: 50%;
+    bottom: 52%;
+    left: 39%;
+    right: 50%;
+    margin: auto;
+}
+img.play-text {
+    animation: spin infinite 25s linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-content.full-height {
+    padding: 0;
+}
+div#birthday-video-box {
+    overflow: visible;
+    min-height: 400px;
+}
+div#birthday-video-box iframe {
+    position: absolute;
+    height: 100%;
+}
+.video-title {
+    position: absolute;
+    bottom: 0;
+    background: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+}
+.footer-txt-wrapper {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.ftw-div {
+    max-width: 350px;
+}
+img.modal-close {
+    position: absolute;
+    right: -60px;
+    top: -60px;
+}
+
+@media(max-width: 992px) {
+    .mc-wrapper h2 span, .names-progress-wrapper h2 span {
+        width: 90%;
+        margin-left: 0;
+    }
+    .mc-wrapper h2, .names-progress-wrapper h2 {
+        font-size: 60px;
+    }
+    .mc-wrapper h2.black-txt, .names-progress-wrapper h2.black-txt {
+        top: 60px;
+        z-index: 0;
+    }
+    .play-trigger-wrapper.modal-trigger {
+        width: 100px;
+    }
+    .txt-block {
+        position: relative;
+        max-width: 60%;
+        bottom: initial;
+        right: 0;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .multiple-pictures {
+        margin-bottom: 35px;
+    }
+}
+@media(max-width: 600px) {
+    #main-page-wrapper {
+        height: auto;
+    }
+    #main-content {
+        padding-bottom: 10px;
+    }
+    footer {
+        padding: 20px;
+        position: relative;
+    }
+    .footer-txt-wrapper {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .ftw-div {
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+    .txt-block {
+        max-width: 90%;
+    }
+    .names-progress-wrapper {
+        font-size: 50px;
+        line-height: 58px;
+        color: #828282;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 10px;
+        height: auto;
+        flex-direction: column-reverse;
+        min-height: 60%;
+        padding: 20px;
+    }
+    .progress-block {
+        font-size: 80px;
+    }
+    .text-1, .text-2 {
+        font-size: 40px;
+    }
+    .multiple-pictures {
+        max-height: 500px;
+    }
+    .multiple-pictures:not(.default-view) {
+        max-height: 10000px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 20px;
+    }
+    .txt-block.pix-shown {
+        opacity: 1 !important;
+    }
+    .mc-wrapper h2, .names-progress-wrapper h2 {
+        font-size: 54px;
+        line-height: 50px;
+        top: 20px;
+    }
+    .mc-wrapper h2.black-txt, .names-progress-wrapper h2.black-txt {
+        top: 130px;
+        z-index: 0;
+    }
+    .play-trigger-wrapper.modal-trigger {
+        width: 70px;
+        top: 170px;
+        position: absolute;
+    }
+    img.modal-close {
+        position: absolute;
+        right: -10px;
+        top: -60px;
+    }
+    img.play-img {
+        width: 30px;
+        left: 35%;
+    }
+}
