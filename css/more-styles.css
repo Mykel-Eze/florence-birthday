@@ -251,6 +251,12 @@ img.modal-close {
     line-height: 1.2;
 }
 
+@media(min-width: 993px) {
+    .pictures-wrapper {
+        padding-bottom: 80px;
+    }
+}
+
 @media(max-width: 992px) {
     .mc-wrapper h2 span, .names-progress-wrapper h2 span {
         width: 90%;
@@ -388,5 +394,8 @@ img.modal-close {
     }
     .pictures-wrapper {
         margin-top: 380px;
+    }
+    .ftw-div.visible-xs {
+        margin-bottom: 40px;
     }
 }
