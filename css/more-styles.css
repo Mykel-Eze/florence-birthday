@@ -5,23 +5,35 @@
 }
 #main-page-wrapper > .row {
     margin: 0;
+    position: relative;
+    z-index: 10;
 }
-.names-progress-wrapper {
-    font-weight: 500;
-    font-size: 60px;
-    line-height: 78px;
-    letter-spacing: -0.03em;
-    color: #828282;
+div#name-greetings-wrapper {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    height: 550px;
+    padding: 20px 0 10px;
     position: absolute;
     width: 100%;
     left: 0;
     bottom: 10px;
-    height: 235px;
 }
-.names-block .hello-txt, .progress-block {
-    color: black;
+.names-progress-wrapper {
+    font-family: var(--font-medium);
+    font-size: 60px;
+    line-height: 78px;
+    letter-spacing: -0.03em;
+    color: #A6B695;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.names-block.flex-div {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.names-block .hello-txt {
+    color: white;
 }
 .hello-txt {
     padding-right: 7px;
@@ -35,20 +47,31 @@
 .text-1, .text-2 {
     display: none;
 }
+.pumpkin-img-wrapper {
+    max-width: 450px;
+}
+img.pumpkin-img-nav {
+    max-width: 280px;
+    position: fixed;
+    top: 35px;
+}
 
 #main-content {
     padding-bottom: 50px;
 }
 .mc-wrapper {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
+.mc-nav {
+    display: flex;
+}
 .mc-wrapper h2, .names-progress-wrapper h2 {
-    font-weight: 500;
+    font-family: var(--font-medium);
     font-size: 90px;
     line-height: 117px;
     letter-spacing: -0.03em;
-    color: #A5A5A5;
+    color: #A6B695;
     margin: 0 auto;
     width: calc(100% - 20px);
     position: fixed;
@@ -56,10 +79,14 @@
     z-index: 10;
     left: 20px;
 }
+.mc-wrapper h2 {
+    left: 240px;
+    font-size: 80px;
+}
 .names-progress-wrapper h2 {
     width: 85%;
 }
-.mc-wrapper h2.black-txt, .names-progress-wrapper h2.black-txt {
+.mc-wrapper h2.white-txt, .names-progress-wrapper h2.black-txt {
     top: 110px;
     z-index: 0;
 }
@@ -219,6 +246,10 @@ img.modal-close {
     right: -60px;
     top: -60px;
 }
+.ftw-div > .bold-txt {
+    font-size: 35px;
+    line-height: 1.2;
+}
 
 @media(max-width: 992px) {
     .mc-wrapper h2 span, .names-progress-wrapper h2 span {
@@ -228,7 +259,7 @@ img.modal-close {
     .mc-wrapper h2, .names-progress-wrapper h2 {
         font-size: 60px;
     }
-    .mc-wrapper h2.black-txt, .names-progress-wrapper h2.black-txt {
+    .mc-wrapper h2.white-txt, .names-progress-wrapper h2.black-txt {
         top: 60px;
         z-index: 0;
     }
@@ -246,6 +277,15 @@ img.modal-close {
     .multiple-pictures {
         margin-bottom: 35px;
     }
+    img.pumpkin-img-nav {
+        max-width: 100px;
+        position: fixed;
+        top: 65px;
+    }
+    .mc-wrapper h2 {
+        left: 130px;
+        font-size: 52px;
+    }
 }
 @media(max-width: 600px) {
     #main-page-wrapper {
@@ -253,6 +293,10 @@ img.modal-close {
     }
     #main-content {
         padding-bottom: 10px;
+    }
+    .mc-wrapper {
+        width: 90%;
+        margin: auto;
     }
     footer {
         padding: 20px;
@@ -282,8 +326,12 @@ img.modal-close {
         bottom: 10px;
         height: auto;
         flex-direction: column-reverse;
-        min-height: 60%;
+        min-height: 550px;
         padding: 20px;
+    }
+    .pumpkin-img-wrapper.visible-xs {
+        width: 80%;
+        margin-bottom: 10px;
     }
     .progress-block {
         font-size: 80px;
@@ -306,9 +354,9 @@ img.modal-close {
     .mc-wrapper h2, .names-progress-wrapper h2 {
         font-size: 54px;
         line-height: 50px;
-        top: 20px;
+        top: 120px;
     }
-    .mc-wrapper h2.black-txt, .names-progress-wrapper h2.black-txt {
+    .mc-wrapper h2.white-txt, .names-progress-wrapper h2.black-txt {
         top: 130px;
         z-index: 0;
     }
@@ -325,5 +373,20 @@ img.modal-close {
     img.play-img {
         width: 30px;
         left: 35%;
+    }
+    img.pumpkin-img-nav {
+        max-width: 150px;
+        position: fixed;
+        top: 25px;
+        z-index: 10;
+    }
+    .mc-wrapper h2 {
+        left: 20px;
+    }
+    .mc-wrapper h2.white-txt {
+        top: 232px;
+    }
+    .pictures-wrapper {
+        margin-top: 380px;
     }
 }

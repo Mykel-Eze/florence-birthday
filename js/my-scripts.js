@@ -28,11 +28,11 @@ $("body > canvas").hide();
 setTimeout(function () {
     confettiInterval = setInterval(frame(), 1000);
     $("body > canvas").show();
-}, 10000); //wait 10 seconds
+}, 12000); //wait 12 seconds
 
 setTimeout(function () {
     $(".text-1").slideDown("1000");
-}, 5000); //wait 3 seconds
+}, 5000); //wait 5 seconds
 
 setTimeout(function () {
     $(".text-2").slideDown("1000");
@@ -40,7 +40,7 @@ setTimeout(function () {
 
 setTimeout(function () {
     $("#main-content, footer").slideDown();
-    $(".names-progress-wrapper").slideUp();
+    $("#name-greetings-wrapper").slideUp();
     $(".play-trigger-wrapper").show();
 }, 13000); //wait 13 seconds
 
@@ -48,6 +48,11 @@ setTimeout(function () {
     clearInterval(confettiInterval);
     $("body > canvas").fadeOut();
 }, 15000); //wait 15 seconds
+
+setTimeout(function () {
+    $(".pumpkins-1").hide();
+    $(".pumpkins-2").show();
+}, 12000); //wait 12 seconds
 
 
 
@@ -71,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Text Transition
-var text = ["Honey.", "Baby.", "My love.", "Ekomuj."];
+var text = ["Honey", "Baby", "My love", "Pumpkin 💕"];
 var counter = 0;
 var elem = $("#name");
 setInterval(change, 2500);

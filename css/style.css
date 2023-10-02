@@ -25,20 +25,12 @@
 	background: rgba(2, 2, 2, 0.4);
 }
 
-.theme-dark ::-webkit-scrollbar-thumb {
-	background: rgba(0, 0, 0, 0.8);
-	border-radius: 10px;
-}
-.theme-dark ::-webkit-scrollbar-thumb:hover {
-	background: rgba(0, 0, 0, 0.4);
-}
-
 body {
 	font-family: 'pushpenny', sans-serif !important;
 	height: auto;
     min-height: 100vh;
-    background-color: white;
-    color: #000000;
+    background-color: #4B5320;
+    color: #ffffff;
 }
 
 .pad0{
@@ -186,5 +178,23 @@ img {
 @media(min-width: 601px) {
     #main-page-wrapper .container {
         width: 92%;
+    }
+}
+
+@media(max-width: 992px) {
+    .hidden-xs-sm{
+        display: none !important;
+    }
+    .visible-xs-sm{
+        display: block !important;
+    }
+}
+
+@media(max-width: 600px) {
+    .hidden-xs{
+        display: none;
+    }
+    .visible-xs{
+        display: block;
     }
 }
